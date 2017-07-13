@@ -240,7 +240,7 @@ class Basket extends Component {
 
     diff = sum - (discountPricesSum + Number(this.state.discount));
 
-    if(diff > 0) {
+    if (diff !== 0) {
       discountPrices[maxPriceIndex] += diff;
     }
 
@@ -252,8 +252,6 @@ class Basket extends Component {
 
   render() {
     let self = this;
-
-    console.log(this.state);
 
     return (
       <div className="basket">
